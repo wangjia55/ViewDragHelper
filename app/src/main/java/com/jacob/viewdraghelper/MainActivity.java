@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.jacob.viewdraghelper.lesson1.LessonOneActivity;
+import com.jacob.viewdraghelper.lesson2.LessonTwoActivity;
 
 
 public class MainActivity extends FragmentActivity {
@@ -25,7 +26,8 @@ public class MainActivity extends FragmentActivity {
     }
 
     public void lessonTwo(View view){
-
+        Intent intent = new Intent(this, LessonTwoActivity.class);
+        startActivity(intent);
     }
 
     public void lessonThree(View view){
