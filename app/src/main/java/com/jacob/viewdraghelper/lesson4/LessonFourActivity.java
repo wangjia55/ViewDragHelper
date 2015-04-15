@@ -5,7 +5,6 @@ import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 
 import com.jacob.viewdraghelper.R;
 
@@ -16,8 +15,6 @@ public class LessonFourActivity extends FragmentActivity implements View.OnClick
 
     private Button mButtonHidden;
     private Button mButtonQueen;
-    private DragLayoutFour mDragLayoutFour;
-    private LinearLayout mLinearMain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,21 +26,6 @@ public class LessonFourActivity extends FragmentActivity implements View.OnClick
 
         mButtonHidden.setOnClickListener(this);
         mButtonQueen.setOnClickListener(this);
-
-        mDragLayoutFour = (DragLayoutFour) findViewById(R.id.drag_layout_four);
-        mLinearMain = (LinearLayout) findViewById(R.id.linear_main);
-        mLinearMain.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
-            @Override
-            public void onLayoutChange(View v, int left, int top, int right, int bottom,
-                                       int oldLeft, int oldTop, int oldRight, int oldBottom) {
-                if (mDragLayoutFour.isMoving()){
-                    v.setTop(oldTop);
-                    v.setBottom(oldBottom);
-                    v.setLeft(oldLeft);
-                    v.setRight(oldRight);
-                }
-            }
-        });
     }
 
 
