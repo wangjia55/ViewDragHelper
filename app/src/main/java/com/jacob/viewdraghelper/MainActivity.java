@@ -11,6 +11,7 @@ import android.view.View;
 import com.jacob.viewdraghelper.lesson1.LessonOneActivity;
 import com.jacob.viewdraghelper.lesson2.LessonTwoActivity;
 import com.jacob.viewdraghelper.lesson3.LessonThreeActivity;
+import com.jacob.viewdraghelper.lesson4.LessonFourActivity;
 
 
 public class MainActivity extends FragmentActivity {
@@ -18,7 +19,7 @@ public class MainActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_test);
     }
 
     public void lessonOne(View view){
@@ -37,6 +38,7 @@ public class MainActivity extends FragmentActivity {
     }
 
     public void lessonFour(View view){
-
+        Intent intent = new Intent(this, LessonFourActivity.class);
+        startActivity(intent);
     }
 }
