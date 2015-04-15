@@ -22,6 +22,9 @@
 
         <activity android:name=".lesson2.LessonTwoActivity"
             android:screenOrientation="portrait"/>
+
+        <activity android:name=".lesson3.LessonThreeActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
